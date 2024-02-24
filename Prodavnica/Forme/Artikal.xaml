@@ -1,0 +1,61 @@
+﻿<Window x:Class="Prodavnica.Forme.Artikal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prodavnica.Forme"
+        mc:Ignorable="d"
+        Title="Artikal" Height="400" Width="580">
+    <Grid>
+        <Border Background="#212529"
+        CornerRadius="20">
+        </Border>
+
+        <Grid>
+            <!--base grid-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="228" />
+                <ColumnDefinition Width="622" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <!--left grid-->
+        <Grid HorizontalAlignment="Left" Width="274">
+            <Border Background="#56646b" Margin="0,0,50,0">
+            </Border>
+            <StackPanel Margin="20,90,69,20">
+                <TextBlock Text="Artikal" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="60"/>
+                <Separator Width="20" Height="30" Background="Transparent"/>
+                <TextBlock Text="Uneti ili izmeniti podatke" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="15"/>
+                <Separator Width="20" Height="90" Background="Transparent"/>
+                <Button Name="CloseButton" Content="CANCEL" Click="CloseButton_Click" Background="#212529" Foreground="White" Width="75"/>
+            </StackPanel>
+        </Grid>
+        <!--right grid-->
+        <Grid HorizontalAlignment="Right" Width="274">
+            <Border/>
+            <StackPanel Margin="20,10,43,-32">
+                <TextBlock Text="Uneti naziv artikla" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                <TextBox Name="txtNaziv" Height="30" Width="205" Foreground="Gray"  ></TextBox>
+
+                <TextBlock Text="Uneti veličinu artikla" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                <TextBox Name="txtVelicina" Height="30" Width="207"  Foreground="Gray"></TextBox>
+
+                <TextBlock Text="Uneti cenu artikla" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                <TextBox Name="txtCena" Height="30" Width="209" Foreground="Gray"></TextBox>
+                <Separator Width="20" Height="5" Background="Transparent"/>
+
+                <TextBlock Text="Uneti raspoloživu količinu artikla" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                <TextBox Name="txtRaspolozivaKolicina" Height="30" Width="223" Foreground="Gray"></TextBox>
+                <TextBlock Text="KategorijaID" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                <ComboBox Name="cbKategorija" SelectedValuePath="KategorijaID" DisplayMemberPath="Kategorija"/>
+                <TextBlock Text="MarkaID" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                <ComboBox Name="cbMarka" SelectedValuePath="MarkaID" DisplayMemberPath="Marka"/>
+                <TextBlock Text="OcenaKupcaID" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                <ComboBox Name="cbOcenaKupca" SelectedValuePath="OcenaKupcaID" DisplayMemberPath="OcenaKupca" />
+                <Separator Width="20" Height="5" Background="Transparent"/>
+                <Button Name="save" Content="SAVE" Background="#56646b" Foreground="White" Width="75" Click="save_Click"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>

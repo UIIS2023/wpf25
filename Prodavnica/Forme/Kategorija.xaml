@@ -1,0 +1,55 @@
+﻿<Window x:Class="Prodavnica.Forme.Kategorija"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prodavnica.Forme"
+        mc:Ignorable="d"
+        Title="Kategorija" Height="400" Width="580">
+    <Grid>
+        <Border Background="#212529"
+ CornerRadius="20"/>
+
+        <Grid>
+            <!--base grid-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="228" />
+                <ColumnDefinition Width="622" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <!--left grid-->
+        <Grid HorizontalAlignment="Left" Width="274">
+            <Border 
+        Background="#56646b" Margin="0,0,50,0" 
+        >
+            </Border>
+            <StackPanel Margin="20,90,69,20">
+                <TextBlock Text="Kategorija" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="40"/>
+                <Separator Width="20" Height="30" Background="Transparent"/>
+                <TextBlock Text="Uneti ili izmeniti podatke" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="15"/>
+                <Separator Width="20" Height="120" Background="Transparent"/>
+                <Button Name="CloseButton" Content="CANCEL" Click="CloseButton_Click" Background="#212529" Foreground="White" Width="75"/>
+            </StackPanel>
+        </Grid>
+        <Grid HorizontalAlignment="Right" Width="274">
+            <Border  Margin="0,0,0,0">
+            </Border>
+            <StackPanel Margin="20,56,69,20">
+                <TextBlock Text="Uneti naziv kategorije" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                <TextBox Name="txtNaziv" Height="30" Width="200" Foreground="Gray" ></TextBox>
+                <Separator Width="20" Height="5" Background="Transparent"/>
+
+                <TextBlock Text="Uneti opis kategorije" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                <TextBox Name="txtOpis" Height="60" Width="200"  Foreground="Gray"></TextBox>
+                <Separator Width="20" Height="5" Background="Transparent"/>
+
+                <TextBlock Text="Uneti raspon cena(max)" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                <TextBox Name="txtRaspon" Height="30" Width="200" Foreground="Gray"></TextBox>
+                <Separator Width="20" Height="75" Background="Transparent"/>
+
+                <Button Name="save" Content="SAVE" Background="#56646b" Foreground="White" Width="75" Click="save_Click"/>
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+</Window>
